@@ -1,0 +1,78 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+
+  "parser": "@typescript-eslint/parser",
+
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".ts", ".tsx", ".js", ".jsx"]
+      }
+    },
+    "import/ignore": ["\\.(scss|less|css)$"]
+  },
+
+  "extends": ["plugin:import/typescript", "prettier"],
+
+  "plugins": ["@typescript-eslint", "import", "jest", "jsx-a11y", "prettier", "react"],
+
+  "rules": {
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": ["CustomInputLabel"],
+        "labelAttributes": ["label"],
+        "controlComponents": ["CustomInput"],
+        "depth": 3
+      }
+    ],
+    "object-curly-newline": "off",
+    "import/no-unresolved": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": ["warn", "error"]
+      }
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
+    "linebreak-style": 0,
+    "import/extensions": "off",
+    "import/no-named-as-default": "off",
+    "arrow-body-style": "off",
+    "react/jsx-props-no-spreading": "off",
+    "arrow-parens": "off",
+    "react/prop-types": "off",
+    "no-shadow": "off",
+    "dot-notation": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "react/button-has-type": "off",
+    "react/require-default-props": "off",
+    "no-param-reassign": ["error", { "props": true, "ignorePropertyModificationsFor": ["state"] }],
+    "max-len": [
+      "error",
+      {
+        "code": 120
+      }
+    ],
+    "no-plusplus": "off"
+  }
+}
